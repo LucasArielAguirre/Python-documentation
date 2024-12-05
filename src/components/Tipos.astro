@@ -1,0 +1,39 @@
+---
+import Document from "./icons/Document.astro"
+import Cafe from "./icons/Cafe.astro"
+---
+
+<div class="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#fdfdfd] via-[#4d4d4d] to-[#2c2c2cda] min-h-screen w-full flex flex-col items-center justify-center pt-12 md:pt-8">
+    <div class="text-center mt-8 md:mt-12" data-aos="fade-down">
+        <h1 class="text-[#1f1f1f] text-2xl md:text-4xl font-extrabold mb-6 md:mb-8 text-shadow">¿QUÉ ESTÁS BUSCANDO?</h1>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 w-full max-w-[90%] md:max-w-[70%] justify-items-center m-auto">
+        <a href="documentacion" 
+            data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine">
+            <div class="flex justify-center items-center h-[240px] w-[240px] sm:h-[270px] sm:w-[270px] md:h-[300px] md:w-[300px] rounded-[40px] border-2 border-[#3d3d3d] bg-[#1f1f1f]/60 backdrop-blur-lg shadow-[16px_16px_60px_rgba(25,25,25,0.8),-16px_-16px_40px_rgba(37,37,37,0.6)] transition-transform transform hover:scale-105">
+                <article class="flex flex-col items-center justify-center h-full p-4 text-center">
+                    <h2 class="text-lg sm:text-2xl md:text-3xl text-gray-200 font-semibold mb-3">Documentación</h2>
+                    <Document />
+                </article>
+            </div>
+        </a>
+        <a href="" data-aos="fade-left"
+           data-aos-offset="200"
+           data-aos-easing="ease-in-sine">
+            <div class="flex justify-center items-center h-[240px] w-[240px] sm:h-[270px] sm:w-[270px] md:h-[300px] md:w-[300px] rounded-[40px] border-2 border-[#3d3d3d] bg-[#1f1f1f]/60 backdrop-blur-lg shadow-[16px_16px_60px_rgba(25,25,25,0.8),-16px_-16px_40px_rgba(37,37,37,0.6)] transition-transform transform hover:scale-105">
+                <article class="flex flex-col items-center justify-center h-full p-4 text-center">
+                    <h2 class="text-lg sm:text-2xl md:text-3xl text-gray-200 font-semibold mb-3">Ejemplos</h2>
+                    <Cafe />
+                </article>
+            </div>
+        </a>
+    </div>
+</div>
+
+<script>
+    import AOS from 'aos';
+    import 'aos/dist/aos.css';
+    AOS.init();
+</script>

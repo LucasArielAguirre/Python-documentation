@@ -1,0 +1,33 @@
+---
+import { todasLasFunciones } from "./data/funciones.ts"
+
+---
+
+  <section class="py-8 px-4 bg-rule">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-2xl font-bold mb-4 text-yellow-400 text-center "> 
+          DOCUMENTACION DE <span class="text-blue-400">PYTHON</span>
+        </h1>
+          <h2 class="text-xl font-bold mb-4 text-yellow-400 text-center underline">
+            LISTAS
+          </h2>
+          <ul class="space-y-8">
+            
+              {todasLasFunciones.map((funcion) => (
+                  <li class="backdrop-blur-md bg-white/10 border border-white/10 rounded-[48px] p-6 " data-aos="flip-down" style="box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6), -10px -10px 30px rgba(255, 255, 255, 0.1);">
+                      <h3 class="text-xl font-semibold text-blue-400">{funcion.funcion}</h3>
+                      <p class="mt-2 text-gray-400">{funcion.descripcion}</p>
+                      <pre class="mt-4 p-4 bg-[#080808]/70 rounded-xl flex overflow-x-auto">
+                          <code class="font-mono text-green-400">{funcion.ejemplo}</code>
+                      </pre>
+                  </li>
+              ))}
+          </ul>
+      </div>
+  </section>
+
+<script>
+    import AOS from 'aos';
+    import 'aos/dist/aos.css';
+    AOS.init();  
+</script>
